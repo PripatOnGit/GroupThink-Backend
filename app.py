@@ -17,12 +17,12 @@ def signup():
 
 @app.route("/api/user/checkUsernameAvailability", methods= ['GET'])
 def checkUserAvailability():
-    data = request.args.get(key)
+    data = request.args.get("username", default=None, type=None)
     print(data)
     data_records = db.read()
     for index in range(len(data_records)):
         for key in data_records[index]:
-            if data == key:
+            if data == data_records[key]:
                 print("Username is already taken !!")
                 break
         else:
