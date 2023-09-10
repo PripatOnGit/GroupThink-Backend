@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Abhijeet",
+        "email": "abhijeet@gmail.com",
+        "username": "abhijeet",
+        "password": "abhi1289",
+        "joinedAt": "09-09-2023 21:13:09",
+        "polls": [
+            {
+                "question": "Do you feel alive?",
+                "choices": [
+                    {
+                        "text": "Yes"
+                    },
+                    {
+                        "text": "No"
+                    }
+                ],
+                "pollLength": {
+                    "days": 1,
+                    "hours": 0
+                },
+                "creationDateTime": "09-10-2023 21:13:09"
+            }
+        ]
+    }
+]
