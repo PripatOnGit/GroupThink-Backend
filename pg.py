@@ -41,10 +41,10 @@ def create_user(data):
     return res == 1
         
     
-def check_user_availability(field, value):
-    query = f"SELECT 1 FROM USERS WHERE {field} = %s"
+def search_user(field, value):
+    query = f"SELECT * FROM USERS WHERE {field} = %s"
     user_found = execute_select_query(query, (value,))    
-    return None if not user_found else False
+    return user_found
 
 
 def read_all_users() -> list:
@@ -58,4 +58,5 @@ def read_all_polls() -> list:
 
 
 if __name__ == "__main__":
-    connect_to_pg()
+    ls = search_user("username",'priu26')
+    print(ls)
